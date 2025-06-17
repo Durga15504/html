@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
+        <h1>TELANGANA STATE ROAD TRANSPORT CORPORATION</h1>
+        <h2>GENERAL BUS PASS APPLICATION</h2>
+    </center>
     <form method="post" action="./submit.html">
         <fieldset>
            <legend>
@@ -39,7 +43,9 @@
                 </tr>
                 <tr>
                     <td><label for="age">Age As on:</label></td>
-                    <td><input type="text" name="age" ></td>
+                    <td><input type="text" name="age" size="1">Year(s)
+                        <input type="text" name="age" size="1">Month(s)
+                        <input type="text" name="age" size="1">Day(s)</td>
                     <td><label for="num">Aadhaar No:</label></td>
                     <td><input type="text" name="num" minlength="12"></td>
                 </tr>
@@ -47,14 +53,14 @@
                     <td><label for="phone">WhatsApp No</label></td>
                     <td><input type="tel" name="phone" id="phone" ></td>
                     <td><label for="email">E-mail Id</label></td>
-                    <td><input type="email" id="email" name="email" required autocomplete="off"></td>
+                    <td><input type="text" id="email" name="email" required pattern="[a-z\d._]+@gmail\.com" autocomplete="off"></td>
                 </tr>
                 <tr>
                     <td><label for="photo">Photo</label></td>
-                    <td><input type="file" name="photo" id="photo" ></td>
+                    <td><input type="file" name="photo" id="photo" accept=".png,.jpeg"></td>
                 </tr>
-                
-           </table>
+           </table>     
+           
         </fieldset>
 
         <fieldset>
@@ -62,20 +68,20 @@
             <table>
                 <tr>
                     <td><label for="address">Aplicant's Address</label></td>
-                    <td><input type="text" name="address" id="address" maxlength="20" ></td>
+                    <td><textarea name="address" id="address" required rows="5"></textarea></td>
                     <td><label for="District">District</label></td>
                     <td><select name="district" id="District" >
-                        <option value="select">-- select --</option>
+                        <option value="select" disabled selected >-----select-----</option>
                     </select></td>
                 </tr>
                 <tr>
                     <td><label for="mandal">Mandal</label></td>
                     <td><select name="mandal" id="Mandal" >
-                        <option value="select">-- select --</option>
+                        <option value="select" disabled selected>-----select-----</option>
                     </select></td>
                     <td><label for="Village">Village</label></td>
                     <td><select name="district" id="District" >
-                        <option value="select">-- select --</option>
+                        <option value="select" disabled selected>-----select-----</option>
                     </select></td>
                 </tr>
                 <tr>
@@ -91,17 +97,51 @@
                 <tr>
                     <td> <label for="city">City</label></td>
                     <td><select name="city" id="city">
-                <option value="select">-- select --</option></select></td>
+                <option value="select" disabled selected>-----select-----</option>
+                <option value="select">Hyderabad</option></select></td>
                 </tr>
                 <tr>
                     <td><label for="pass">Pass Type</label></td>
                     <td><select name="pass" id="pass" >
-                <option value="select">-- select --</option>
+                <option value="select" disabled selected>-----select-----</option>
+                <option value="select">Greater Pass</option>
+                <option value="select">Ordinary Pass</option>
+                <option value="select">Metro Express Pass</option>
+                <option value="select">Metro Deluxe Pass</option>
+                <option value="select">General Ordinary Route Pass</option>
             </select></td>
                 </tr>
            </table>
         </fieldset>
         <br>
+
+        <fieldset>
+            <legend>Mode of Payment & Pass Collection</legend>
+            <table>
+                <tr>
+                    <td><label for="Payment">Payment Mode</label></td>
+                <td> <select name="Select" id="select">
+                    <option value="select" disabled selected>Select Payment Mode</option>
+                    <option value="select">Payment at Counter</option>
+                </select></td>
+                </tr>
+                <tr>
+                    <td><label for="delivery">Pass Delivery Mode</label></td>
+                <td> <select name="Select" id="select">
+                    <option value="select" disabled selected>Select Pass Delivery Mode</option>
+                    <option value="select">At Counter</option>
+                </select></td>
+                </tr>
+                <tr>
+                    <td><label for="Pass">Center at which you want to Collect Pass</label></td>
+                <td> <select name="Select" id="select">
+                    <option value="select" disabled selected>-----Select-----</option>
+                    
+                </select></td>
+                </tr>
+
+            </table>
+        </fieldset>
 
         <center><input type="submit"></center>
     </form>
